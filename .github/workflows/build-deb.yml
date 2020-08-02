@@ -1,0 +1,20 @@
+name: Build Binaries
+
+on:
+  push:
+
+jobs:
+  Deb:
+    runs-on: ubuntu-18.04
+
+    steps:
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+
+      - name: Download release
+        run: |
+          curl https://github.com/tidusjar/Ombi.Releases/releases/download/v4.0.426/linux-arm64.tar.gz -O linux-arm64.tar.gz
+
+      - name: Unpack release
+          mkdir app/
+          tar xzf - -C app/
