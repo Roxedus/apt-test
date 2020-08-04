@@ -1,0 +1,37 @@
+Origin: https://roxedus.github.io/apt-test/
+Label: https://roxedus.github.io/apt-test/
+Codename: focal
+Date: Tue, 04 Aug 2020 20:05:26 UTC
+Architectures: amd64 arm64 armhf
+Components: main
+Description: ombitest
+MD5Sum:
+ a2c48a74b944ce18c3e78bf46cd9477c 722 main/binary-amd64/Packages
+ 76a68c01b353be78983356460c1bbdc8 500 main/binary-amd64/Packages.gz
+ 634e2db3a0469c2e743468a489e1dedf 145 main/binary-amd64/Release
+ 6dfe08168dd9baf101f9418810ec87d6 722 main/binary-arm64/Packages
+ 25d9320b9100cb1a20e0bd62ccfa9f9d 506 main/binary-arm64/Packages.gz
+ f5f191ac69eeb4bedc65c06e8efc76c2 145 main/binary-arm64/Release
+ 416b7491e2a4a507432512c215a9d62c 722 main/binary-armhf/Packages
+ 3dde5f71a2e2b9af9c1954c561967542 498 main/binary-armhf/Packages.gz
+ ba5c7b6dfa443d8b4ee245a9ca560b21 145 main/binary-armhf/Release
+SHA1:
+ 1f96ed94664800b12b5a1521423b5fa48e159e07 722 main/binary-amd64/Packages
+ bf6d2060eb2e4f3d81a0a3390f9ce934735c7bac 500 main/binary-amd64/Packages.gz
+ a71d3cf1211737189e9b210921e930cb630d470a 145 main/binary-amd64/Release
+ c7faa54bbf3470e519e0adc7cbc06f4477555b3b 722 main/binary-arm64/Packages
+ c9fd8a69bd8a05fab1f92de32c9bacde716964da 506 main/binary-arm64/Packages.gz
+ b7703f1e0140e180672dbb15f8b750ccd2347250 145 main/binary-arm64/Release
+ bdf15d4684eb2bb2d6ea4c2245cbdd43117b02e9 722 main/binary-armhf/Packages
+ 3cb9ce278677b5873110c337069d00cee848ee95 498 main/binary-armhf/Packages.gz
+ 0887d002c430679250c4a3cd19b8edf32a9deffa 145 main/binary-armhf/Release
+SHA256:
+ d259b6e0c55ac2945ba0635796624c6c3c83e6cc3aca70b74f233d4c048025e2 722 main/binary-amd64/Packages
+ d91f515877f1f59a0e325aab4bcd6f2feba1d143acae79b800b3f68cc1024f89 500 main/binary-amd64/Packages.gz
+ ad13de188f60bc5550466a129704201d9884cc3abf7febe4d910d58dc3326d0b 145 main/binary-amd64/Release
+ d5d6308ff0e954f91befc773516b4faca4885715d8983cf07165014578e13fdf 722 main/binary-arm64/Packages
+ beab6a446aa1b1540fac3dc1a4059ad8710b4fd9b832d3998b2ce1b39542b71c 506 main/binary-arm64/Packages.gz
+ 43f6681cc1dd5b76dbace55e4a0446601c44187143ac89d8c0c04c9af561317b 145 main/binary-arm64/Release
+ 36298da2783b6d7527a58870ddf523d699d650e3802defdf4415155559708513 722 main/binary-armhf/Packages
+ 2fc6803c0c1d1e46a6290783ec498e4dd22c3f32ea3f774d40880a8ed324a79e 498 main/binary-armhf/Packages.gz
+ 616866781abc6bedab4d6dc942dfc2cf85e48f4e2332b82a0ede54f3a0d72b6f 145 main/binary-armhf/Release
