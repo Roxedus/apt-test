@@ -1,7 +1,7 @@
 Origin: https://roxedus.github.io/apt-test/
 Label: https://roxedus.github.io/apt-test/
 Codename: focal
-Date: Tue, 04 Aug 2020 21:13:20 UTC
+Date: Tue, 04 Aug 2020 21:15:38 UTC
 Architectures: amd64 arm64 armhf
 Components: main develop
 Description: ombitest
@@ -21,8 +21,8 @@ MD5Sum:
  1878b69bcb08ad8bde67ee1723f2a54a 725 develop/binary-arm64/Packages
  0a6decf3435724ffcc6f3d34f2eb2ba1 508 develop/binary-arm64/Packages.gz
  f937b87a1d042bea471c7cf8edaf654d 148 develop/binary-arm64/Release
- d41d8cd98f00b204e9800998ecf8427e 0 develop/binary-armhf/Packages
- 7029066c27ac6f5ef18d660d5741979a 20 develop/binary-armhf/Packages.gz
+ 7a0c1a6a9a429413df57a9e1e1c20ebf 725 develop/binary-armhf/Packages
+ 931b31d605ebf4332717a7b48b052ee6 500 develop/binary-armhf/Packages.gz
  1e4440621969b06e3a962f08437179a2 148 develop/binary-armhf/Release
 SHA1:
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-amd64/Packages
@@ -40,8 +40,8 @@ SHA1:
  8a8cdbef82722a2b6ac3692032121262aa0fb4a1 725 develop/binary-arm64/Packages
  cb09ab6c9266fdc333d05a6ec5a68b5ed54d8306 508 develop/binary-arm64/Packages.gz
  e9d0bf524ada21384f7935424565a6d672f1c8b4 148 develop/binary-arm64/Release
- da39a3ee5e6b4b0d3255bfef95601890afd80709 0 develop/binary-armhf/Packages
- 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 develop/binary-armhf/Packages.gz
+ 51c90d9168c8418a4e81937466f27b034288f4c4 725 develop/binary-armhf/Packages
+ 87b778a129d2cab10cf083446f57067627ec307e 500 develop/binary-armhf/Packages.gz
  dca6719eaba1d8273c1d1abe8abd697c177018ab 148 develop/binary-armhf/Release
 SHA256:
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-amd64/Packages
@@ -59,6 +59,6 @@ SHA256:
  f9a409d174d53fbd796da74bdabdc30d77f716378121935f549a99e03546e270 725 develop/binary-arm64/Packages
  c46771deaec5d799c789d00a9b7b340017353efbde39b7008ee5e246a328e07d 508 develop/binary-arm64/Packages.gz
  8df080e24a7c8460ddce4975e89daf780954ee8d6d5fedd3133b66f433c3a388 148 develop/binary-arm64/Release
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 develop/binary-armhf/Packages
- 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 develop/binary-armhf/Packages.gz
+ 576ddd86237fb4b682b8d5a86acb182bf28066475bf0313c3720df7a5cc23f35 725 develop/binary-armhf/Packages
+ bf9719dd6779e6921386d0fbe3d85940353855294054b38b8d0aac8eb665ab8c 500 develop/binary-armhf/Packages.gz
  6e91ba1465f2e13c21605b772d9388a2f1b9affad29ae00d6d2cda6444c526a1 148 develop/binary-armhf/Release
