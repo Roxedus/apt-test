@@ -6,7 +6,7 @@ Installed-Size: 151942
 Depends: adduser
 Priority: optional
 Section: main
-Filename: pool/main/o/ombi/ombi_4.0.284_arm64.deb
+Filename: pool/develop/o/ombi/ombi_4.0.284_arm64.deb
 Size: 36179092
 SHA256: fe76c12b7f0a990469ca6800213bcfc748d030ff43805a798a690acad6f8b139
 SHA1: d9e18f2bdc9060495a783757f57263b494c4a7e2

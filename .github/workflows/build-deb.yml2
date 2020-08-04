@@ -1,0 +1,29 @@
+name: Build Binaries
+
+on:
+  push:
+
+jobs:
+  Deb:
+    runs-on: ubuntu-18.04
+
+    steps:
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+
+      - name: Create folders
+        run: |
+          mkdir -p .debpkg/opt/ombi/
+
+      - name: Download and unpack release
+        run: |
+          curl -fsSL https://github.com/tidusjar/Ombi.Releases/releases/download/v4.0.426/linux-x64.tar.gz | tar xzf - -C .debpkg/opt/ombi/
+
+      - uses: jiro4989/build-deb-action@v2
+        with:
+          package: ombi
+          package_root: .debpkg
+          maintainer: rox
+          version: 13.37 # refs/tags/v*.*.*
+          arch: "amd64"
+          desc: "this is sample package."

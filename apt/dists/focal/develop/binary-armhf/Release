@@ -1,0 +1,5 @@
+Component: develop
+Origin: https://roxedus.github.io/apt-test/
+Label: https://roxedus.github.io/apt-test/
+Architecture: armhf
+Description: ombitest

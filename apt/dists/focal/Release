@@ -1,0 +1,64 @@
+Origin: https://roxedus.github.io/apt-test/
+Label: https://roxedus.github.io/apt-test/
+Codename: focal
+Date: Tue, 04 Aug 2020 21:13:20 UTC
+Architectures: amd64 arm64 armhf
+Components: main develop
+Description: ombitest
+MD5Sum:
+ d41d8cd98f00b204e9800998ecf8427e 0 main/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 main/binary-amd64/Packages.gz
+ 634e2db3a0469c2e743468a489e1dedf 145 main/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/binary-arm64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 main/binary-arm64/Packages.gz
+ f5f191ac69eeb4bedc65c06e8efc76c2 145 main/binary-arm64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/binary-armhf/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 main/binary-armhf/Packages.gz
+ ba5c7b6dfa443d8b4ee245a9ca560b21 145 main/binary-armhf/Release
+ 1033a64ffe1a1bc9c53efa1d3fdef4cc 725 develop/binary-amd64/Packages
+ a85f302887f05b2ffa9d13084db688e0 505 develop/binary-amd64/Packages.gz
+ 5e797974342140fa6bff7bcbcc4a129a 148 develop/binary-amd64/Release
+ 1878b69bcb08ad8bde67ee1723f2a54a 725 develop/binary-arm64/Packages
+ 0a6decf3435724ffcc6f3d34f2eb2ba1 508 develop/binary-arm64/Packages.gz
+ f937b87a1d042bea471c7cf8edaf654d 148 develop/binary-arm64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 develop/binary-armhf/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 develop/binary-armhf/Packages.gz
+ 1e4440621969b06e3a962f08437179a2 148 develop/binary-armhf/Release
+SHA1:
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-amd64/Packages.gz
+ a71d3cf1211737189e9b210921e930cb630d470a 145 main/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-arm64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-arm64/Packages.gz
+ b7703f1e0140e180672dbb15f8b750ccd2347250 145 main/binary-arm64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-armhf/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-armhf/Packages.gz
+ 0887d002c430679250c4a3cd19b8edf32a9deffa 145 main/binary-armhf/Release
+ fe765bb4a547fd2bceb3b74e59cc03534481c792 725 develop/binary-amd64/Packages
+ 7a46e8d3c2f7c39e680239e14eedf6590d4ae40e 505 develop/binary-amd64/Packages.gz
+ 11433e37dca252e2e68733a1d207a3a524f7fa61 148 develop/binary-amd64/Release
+ 8a8cdbef82722a2b6ac3692032121262aa0fb4a1 725 develop/binary-arm64/Packages
+ cb09ab6c9266fdc333d05a6ec5a68b5ed54d8306 508 develop/binary-arm64/Packages.gz
+ e9d0bf524ada21384f7935424565a6d672f1c8b4 148 develop/binary-arm64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 develop/binary-armhf/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 develop/binary-armhf/Packages.gz
+ dca6719eaba1d8273c1d1abe8abd697c177018ab 148 develop/binary-armhf/Release
+SHA256:
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-amd64/Packages.gz
+ ad13de188f60bc5550466a129704201d9884cc3abf7febe4d910d58dc3326d0b 145 main/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-arm64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-arm64/Packages.gz
+ 43f6681cc1dd5b76dbace55e4a0446601c44187143ac89d8c0c04c9af561317b 145 main/binary-arm64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-armhf/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-armhf/Packages.gz
+ 616866781abc6bedab4d6dc942dfc2cf85e48f4e2332b82a0ede54f3a0d72b6f 145 main/binary-armhf/Release
+ e4806a7130069e304898b1ca424e2ed58e8e4cb112c727626561fdfba9ececf4 725 develop/binary-amd64/Packages
+ 0c2a289a1fb8ac029c1cc49864249b1620064e8aff5190a904eb47e0cc5ae4ee 505 develop/binary-amd64/Packages.gz
+ 189db5c85b928f77020298f9547dd543fc37136fda969eb83dcb44b3b0f48a11 148 develop/binary-amd64/Release
+ f9a409d174d53fbd796da74bdabdc30d77f716378121935f549a99e03546e270 725 develop/binary-arm64/Packages
+ c46771deaec5d799c789d00a9b7b340017353efbde39b7008ee5e246a328e07d 508 develop/binary-arm64/Packages.gz
+ 8df080e24a7c8460ddce4975e89daf780954ee8d6d5fedd3133b66f433c3a388 148 develop/binary-arm64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 develop/binary-armhf/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 develop/binary-armhf/Packages.gz
+ 6e91ba1465f2e13c21605b772d9388a2f1b9affad29ae00d6d2cda6444c526a1 148 develop/binary-armhf/Release
