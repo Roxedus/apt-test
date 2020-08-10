@@ -1,0 +1,57 @@
+name: Build Binaries
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to publish"
+        required: true
+
+jobs:
+  Deb:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create Debs
+        uses: ./build
+        id: build
+        with:
+          repo: tidusjar/Ombi.Releases
+          maintainer: Roxedus <me@roxedus.dev>
+          name: ombi
+          version: ${{ github.event.inputs.version }}
+          description: |
+            Want a Movie or TV Show on Plex or Emby? Use Ombi!
+            Ombi is a self-hosted web application that automatically gives your
+            shared Plex or Emby users the ability to request content by themselves!
+            Ombi can be linked to multiple TV Show and Movie DVR tools to create
+            a seamless end-to-end experience for your users.
+
+      - name: Publish Debs
+        uses: ./publish
+        with:
+          gpg_priv: ${{ secrets.GPG_PRIV }}
+          gpg_passphrase: ${{ secrets.GPG_PHRASE }}
+          state: ${{ steps.build.outputs.state }}
+
+      - name: deploy
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./repo/public
+        with:
+          emptyCommits: "false"
+
+      - name: Add Debs
+        uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
+        with:
+          add: repo
+          author_name: RoxBot
+          message: Added New Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

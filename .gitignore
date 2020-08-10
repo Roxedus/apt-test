@@ -1,1 +1,5 @@
-container/
+.env
+.secret
+builds/
+publish/.privkey
+venv/
