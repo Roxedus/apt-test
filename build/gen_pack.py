@@ -61,8 +61,6 @@ data["description"] = data["description"].replace("\n", "\n ")
 def gen_metadata(data):
     r = requests.get(url=url + f"/releases/tags/{data['tag']}", headers=headers).json()
 
-    pprint(f"::debug::{r}")
-
     changelog = f"Automaticity generated, visit https://github.com/{data['project']}/releases/tag/{data['tag']}\n"
     changelog += r["body"].replace('\r', '')
     changelog = changelog.replace('\n', '\n  ')
