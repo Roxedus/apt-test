@@ -31,7 +31,7 @@ jobs:
             Ombi can be linked to multiple TV Show and Movie DVR tools to create
             a seamless end-to-end experience for your users.
 
-      - name: Crude per fix
+      - name: Crude perm fix
         run: chmod +x ./publish/entrypoint.sh
 
       - name: Publish Debs
@@ -45,7 +45,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./repo/public
         with:
