@@ -16,4 +16,4 @@ fi
 GPG_TTY=$(tty)
 export GPG_TTY
 
-find . -name '*.deb' -exec reprepro -VVVVVVVb ./repo/metadata --outdir ./repo/public -C ${comp} includedeb jessie {} \;
+find . -name '*.deb' -exec reprepro -VVb ./repo/metadata --outdir ./repo/public -C ${comp} includedeb jessie {} \;
