@@ -55,7 +55,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: master
+          PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./repo/public
         with:
           emptyCommits: "false"
