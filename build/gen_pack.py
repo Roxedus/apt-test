@@ -108,7 +108,7 @@ def gen_pkg(data):
     while True:
         msg = process.stdout.readline() or process.stderr.readline()
         log += msg
-        print(msg.strip())
+        print(f"[ {msg.strip()} ]")
         return_code = process.poll()
         if return_code is not None:
             print('RETURN CODE', return_code)

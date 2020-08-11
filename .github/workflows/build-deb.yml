@@ -6,7 +6,6 @@ on:
       version:
         description: "Version to publish"
         required: true
-  push:
 
 jobs:
   Deb:
@@ -23,7 +22,7 @@ jobs:
           repo: tidusjar/Ombi.Releases
           maintainer: Roxedus <me@roxedus.dev>
           name: ombi
-          version: v4.0.442
+          version: ${{ github.event.inputs.version }}
           description: |
             Want a Movie or TV Show on Plex or Emby? Use Ombi!
             Ombi is a self-hosted web application that automatically gives your
