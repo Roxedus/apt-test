@@ -21,7 +21,7 @@ fi
 find . -path "./builds/*" -name '*.deb' -exec aptly repo add -config="repo/${branch}.aptly.conf" "${package}" {} \;
 
 if [[ ! -d "${HOME}/repo/public/${branch}/pool" ]]; then
-    aptly publish repo -config="repo/${branch}.aptly.conf" -batch -passphrase="${INPUT_GPG_PHRASE}" ombi filesystem:public:${branch}
+    aptly publish repo -config="repo/${branch}.aptly.conf" -batch -passphrase="${INPUT_GPG_PASSPHRASE}" ombi filesystem:public:${branch}
 else
-    aptly publish update -config="repo/${branch}.aptly.conf" -batch -passphrase="${INPUT_PHRASE}" "${distro}" filesystem:public:${branch}
+    aptly publish update -config="repo/${branch}.aptly.conf" -batch -passphrase="${INPUT_GPG_PASSPHRASE}" "${distro}" filesystem:public:${branch}
 fi
