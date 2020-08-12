@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "${GPG_PRIV}" | gpg --batch --import
+echo -e "${INPUT_GPG_PRIV}" | gpg --batch --import
 
 package=ombi
 distro=jessie
