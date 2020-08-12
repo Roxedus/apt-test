@@ -14,13 +14,13 @@ fi
 
 echo "yeet ${branch} ${INPUT_STATE}"
 
-if [[ ! -d "${HOME}/repo/${branch}/db" ]]; then
+if [[ ! -d "./repo/${branch}/db" ]]; then
     aptly repo create -config="repo/${branch}.aptly.conf" -distribution="${distro}" "${package}"
 fi
 
 find . -path "./builds/*" -name '*.deb' -exec aptly repo add -config="repo/${branch}.aptly.conf" "${package}" {} \;
 
-if [[ ! -d "${HOME}/repo/public/${branch}/pool" ]]; then
+if [[ ! -d "./repo/public/${branch}/pool" ]]; then
     aptly publish repo -config="repo/${branch}.aptly.conf" -batch -passphrase="${INPUT_GPG_PASSPHRASE}" ombi filesystem:public:${branch}
 else
     aptly publish update -config="repo/${branch}.aptly.conf" -batch -passphrase="${INPUT_GPG_PASSPHRASE}" "${distro}" filesystem:public:${branch}
