@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive HOME=$GITHUB_HOME
 
 RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends --no-install-suggests \
@@ -8,8 +8,12 @@ RUN apt-get update -qq && \
         curl \
         debhelper \
         dpkg \
-        gnupg2 \
-        reprepro
+        gnupg2 && \
+    curl -sSL https://www.aptly.info/pubkey.txt | apt-key add - && \
+    echo "deb http://repo.aptly.info/ squeeze main" | tee /etc/apt/sources.list.d/aptly.list && \
+    apt-get update -qq && \
+    apt-get install -y --no-install-recommends --no-install-suggests \
+        aptly
 
-COPY /entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+# COPY /entrypoint.sh /entrypoint.sh
+# ENTRYPOINT ["/entrypoint.sh"]

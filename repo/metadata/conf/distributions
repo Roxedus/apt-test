@@ -1,7 +1,0 @@
-Origin: https://roxedus.github.io/apt-test/
-Label: https://roxedus.github.io/apt-test/
-Codename: jessie
-Architectures: amd64 arm64 armhf
-Components: main develop
-Description: ombi
-SignWith: 14717EF7

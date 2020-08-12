@@ -21,7 +21,8 @@ baseDir = f"{scriptsDir}/out"
 outDir = "./builds"
 
 makedirs(baseDir)
-makedirs(outDir)
+if not os.path.exists(outDir):
+    makedirs(outDir)
 
 data = {}
 project = os.environ.get("INPUT_REPO", os.environ.get("GITHUB_REPOSITORY"))
@@ -108,7 +109,7 @@ def gen_pkg(data):
     while True:
         msg = process.stdout.readline() or process.stderr.readline()
         log += msg
-        print(f"[ {msg.strip()} ]")
+        print(f"[ {data['arch']} ] {msg.strip()}")
         return_code = process.poll()
         if return_code is not None:
             print('RETURN CODE', return_code)

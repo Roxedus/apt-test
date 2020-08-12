@@ -1,19 +1,27 @@
 #!/bin/bash
 
-GPG_TTY=$(tty)
-export GPG_TTY
+echo -e "${GPG_PRIV}" | gpg --batch --import
 
-#eval gpg-agent --batch --daemon
-echo -e "${INPUT_GPG_PRIV}" | gpg --batch --import
-echo "${INPUT_GPG_PASSPHRASE}" | gpg --batch --pinentry-mode loopback --passphrase-fd 0 --output /test --sign ./README.md
+package=ombi
+distro=jessie
 
-if [ "${INPUT_STATE}" != "unstable" ]; then
-    comp="main"
+if [ "${INPUT_STATE}" == "stable" ]; then
+    branch="master"
+
 else
-    comp="develop"
+    branch="develop"
 fi
 
-GPG_TTY=$(tty)
-export GPG_TTY
+echo "yeet ${branch} ${INPUT_STATE}"
 
-find . -name '*.deb' -exec reprepro -VVb ./repo/metadata --outdir ./repo/public -C ${comp} includedeb jessie {} \;
+if [[ ! -d "${HOME}/repo/${branch}/db" ]]; then
+    aptly repo create -config="repo/${branch}.aptly.conf" -distribution="${distro}" "${package}"
+fi
+
+find . -path "./builds/*" -name '*.deb' -exec aptly repo add -config="repo/${branch}.aptly.conf" "${package}" {} \;
+
+if [[ ! -d "${HOME}/repo/public/${branch}/pool" ]]; then
+    aptly publish repo -config="repo/${branch}.aptly.conf" -batch -passphrase="${INPUT_GPG_PHRASE}" ombi filesystem:public:${branch}
+else
+    aptly publish update -config="repo/${branch}.aptly.conf" -batch -passphrase="${INPUT_PHRASE}" "${distro}" filesystem:public:${branch}
+fi
