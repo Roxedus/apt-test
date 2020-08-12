@@ -15,5 +15,5 @@ RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends --no-install-suggests \
         aptly
 
-# COPY /entrypoint.sh /entrypoint.sh
-# ENTRYPOINT ["/entrypoint.sh"]
+COPY /entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
