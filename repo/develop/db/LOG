@@ -290,3 +290,60 @@
 22:20:31.495906 table@remove removed @53
 22:20:45.007074 db@close closing
 22:20:45.007168 db@close done T·82.3µs
+=============== Aug 27, 2020 (UTC) ===============
+21:25:27.380645 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:25:27.380801 version@stat F·[0 1] S·112KiB[0B 112KiB] Sc·[0.00 0.00]
+21:25:27.380810 db@open opening
+21:25:27.380845 journal@recovery F·1
+21:25:27.381722 journal@recovery recovering @64
+21:25:27.384251 memdb@flush created L0@67 N·4 S·24KiB "E43..ain,v132":"xCP..306,v131"
+21:25:27.384548 version@stat F·[1 1] S·137KiB[24KiB 112KiB] Sc·[0.25 0.00]
+21:25:27.385991 db@janitor F·4 G·0
+21:25:27.386013 db@open done T·5.195858ms
+21:25:27.738966 db@close closing
+21:25:27.739053 db@close done T·86.004µs
+=============== Aug 27, 2020 (UTC) ===============
+21:25:27.756609 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:25:27.756827 version@stat F·[1 1] S·137KiB[24KiB 112KiB] Sc·[0.25 0.00]
+21:25:27.756835 db@open opening
+21:25:27.756873 journal@recovery F·1
+21:25:27.758338 journal@recovery recovering @68
+21:25:27.760528 memdb@flush created L0@70 N·6 S·1KiB "C20..deb,v134":"xFP..2f9,v136"
+21:25:27.760822 version@stat F·[2 1] S·138KiB[26KiB 112KiB] Sc·[0.50 0.00]
+21:25:27.762359 db@janitor F·5 G·0
+21:25:27.762381 db@open done T·5.538675ms
+21:25:28.091089 db@close closing
+21:25:28.091165 db@close done T·74.204µs
+=============== Aug 27, 2020 (UTC) ===============
+21:25:28.106606 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:25:28.106749 version@stat F·[2 1] S·138KiB[26KiB 112KiB] Sc·[0.50 0.00]
+21:25:28.106758 db@open opening
+21:25:28.106796 journal@recovery F·1
+21:25:28.107799 journal@recovery recovering @71
+21:25:28.109136 memdb@flush created L0@73 N·6 S·1KiB "Cd3..deb,v141":"xFP..c01,v143"
+21:25:28.109520 version@stat F·[3 1] S·140KiB[28KiB 112KiB] Sc·[0.75 0.00]
+21:25:28.111614 db@janitor F·6 G·0
+21:25:28.111649 db@open done T·4.872857ms
+21:25:28.464722 db@close closing
+21:25:28.464788 db@close done T·65.303µs
+=============== Aug 27, 2020 (UTC) ===============
+21:25:28.475703 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:25:28.475855 version@stat F·[3 1] S·140KiB[28KiB 112KiB] Sc·[0.75 0.00]
+21:25:28.475863 db@open opening
+21:25:28.475902 journal@recovery F·1
+21:25:28.476764 journal@recovery recovering @74
+21:25:28.477857 memdb@flush created L0@76 N·6 S·1KiB "C93..deb,v148":"xFP..371,v150"
+21:25:28.478182 version@stat F·[4 1] S·141KiB[29KiB 112KiB] Sc·[1.00 0.00]
+21:25:28.479685 db@janitor F·7 G·0
+21:25:28.479707 db@open done T·3.837502ms
+21:25:28.479801 table@compaction L0·4 -> L1·1 S·141KiB Q·154
+21:25:28.483503 table@build created L1@79 N·109 S·139KiB "C15..deb,v44":"xFP..2f9,v136"
+21:25:28.483534 version@stat F·[0 1] S·139KiB[0B 139KiB] Sc·[0.00 0.00]
+21:25:28.483863 table@compaction committed F-4 S-2KiB Ke·0 D·4 T·3.950808ms
+21:25:28.483907 table@remove removed @76
+21:25:28.483937 table@remove removed @73
+21:25:28.483962 table@remove removed @70
+21:25:28.483990 table@remove removed @67
+21:25:28.484031 table@remove removed @66
+21:25:43.164833 db@close closing
+21:25:43.164891 db@close done T·55.703µs
