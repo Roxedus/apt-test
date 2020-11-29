@@ -15,10 +15,10 @@ import requests
 from jinja2 import Environment, FileSystemLoader
 
 
-arches = os.environ.get("arches", ["amd64", "arm64", "armhf"])
+arches = list(os.environ.get("arches").split(",") or ["amd64", "arm64", "armhf"])
 scriptsDir = "/scripts"
 baseDir = f"{scriptsDir}/out"
-outDir = "./builds"
+outDir = "/builds"
 
 makedirs(baseDir)
 if not os.path.exists(outDir):
@@ -63,7 +63,7 @@ def gen_metadata(data):
     r = requests.get(url=url + f"/releases/tags/{data['tag']}", headers=headers).json()
 
     changelog = f"Automaticity generated, visit https://github.com/{data['project']}/releases/tag/{data['tag']}\n"
-    changelog += r["body"].replace('\r', '')
+    changelog += r.get("body").replace('\r', '')
     changelog = changelog.replace('\n', '\n  ')
     data["changelog"] = changelog
     data["state"] = "unstable"
@@ -106,15 +106,21 @@ def gen_pkg(data):
     process = subprocess.Popen(["dpkg-buildpackage", "-b", "-us", "-uc", "-a",
                                 data['arch']], cwd=ver_dir, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
     log = ""
+    errlog = ""
     while True:
-        msg = process.stdout.readline() or process.stderr.readline()
+        msg = process.stdout.readline()
+        err = process.stderr.readline()
         log += msg
+        errlog += err
         print(f"[ {data['arch']} ] {msg.strip()}")
         return_code = process.poll()
         if return_code is not None:
             print('RETURN CODE', return_code)
             with open(f"{outDir}/{data['arch']}_build.log", "w") as f:
                 for msg in log:
+                    f.write(msg)
+            with open(f"{outDir}/{data['arch']}_err.log", "w") as f:
+                for msg in errlog:
                     f.write(msg)
             if return_code != 0:
                 exit(1)
