@@ -1163,3 +1163,14 @@
 01:06:59.192221 table@remove removed @261
 01:07:05.149380 db@close closing
 01:07:05.149537 db@close done T·154.806µs
+=============== Nov 30, 2020 (UTC) ===============
+03:56:52.425294 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+03:56:52.427141 version@stat F·[0 1] S·498KiB[0B 498KiB] Sc·[0.00 0.00]
+03:56:52.427155 db@open opening
+03:56:52.427216 journal@recovery F·1
+03:56:52.428983 journal@recovery recovering @263
+03:56:52.429883 version@stat F·[0 1] S·498KiB[0B 498KiB] Sc·[0.00 0.00]
+03:56:52.434143 db@janitor F·3 G·0
+03:56:52.434169 db@open done T·7.006492ms
+03:57:00.922472 db@close closing
+03:57:00.922563 db@close done T·90.3µs
