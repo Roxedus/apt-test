@@ -12,11 +12,11 @@ else
     branch="develop"
 fi
 
-echo "yeet ${branch} ${INPUT_STATE}"
-
 if [[ ! -d "./repo/${branch}/db" ]]; then
     aptly repo create -config="repo/${branch}.aptly.conf" -distribution="${distro}" "${package}"
 fi
+
+echo "Found debs: $(find . -path './builds/*' -name '*.deb')"
 
 find . -path "./builds/*" -name '*.deb' -exec aptly repo add -config="repo/${branch}.aptly.conf" "${package}" {} \;
 

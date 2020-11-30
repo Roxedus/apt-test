@@ -20,4 +20,7 @@ RUN apt-get update -qq && \
     pip3 install jinja2 requests
 
 COPY / scripts/
+
+RUN chmod -x -R /scripts
+
 ENTRYPOINT ["python3", "-u", "/scripts/gen_pack.py"]

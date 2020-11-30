@@ -30,9 +30,6 @@ jobs:
             Ombi can be linked to multiple TV Show and Movie DVR tools to create
             a seamless end-to-end experience for your users.
 
-      - name: Crude perm fix
-        run: chmod +x ./publish/entrypoint.sh
-
       - name: Publish Debs
         uses: ./publish
         with:
