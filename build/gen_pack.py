@@ -15,7 +15,7 @@ import requests
 from jinja2 import Environment, FileSystemLoader
 
 
-arches = list(os.environ.get("arches").split(",") or ["amd64", "arm64", "armhf"])
+arches = list(os.environ.get("arches").split(",")) if os.environ.get("arches", False) else ["amd64", "arm64", "armhf"]
 scriptsDir = "/scripts"
 baseDir = f"{scriptsDir}/out"
 outDir = "/builds"
