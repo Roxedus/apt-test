@@ -1,5 +1,5 @@
 name: "Publish using reprepro"
-description: "Creates, and manages a apt repo with reprepro"
+description: "Creates, and manages a apt repo with aptly"
 inputs:
   gpg_priv:
     description: "GPG private signing key"

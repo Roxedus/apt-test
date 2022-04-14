@@ -6,6 +6,9 @@ on:
       version:
         description: "Version to publish"
         required: true
+      branch:
+        description: "Branch to publish"
+        required: false
 
 jobs:
   Deb:
@@ -19,7 +22,7 @@ jobs:
         uses: ./build
         id: build
         with:
-          repo: tidusjar/Ombi.Releases
+          repo: Ombi-io/Ombi.Releases
           maintainer: Roxedus <me@roxedus.dev>
           name: ombi
           version: ${{ github.event.inputs.version }}
